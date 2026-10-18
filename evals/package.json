@@ -1,0 +1,11 @@
+{
+  "name": "@tracecase/evals",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "@tracecase/core": "workspace:*",
+    "@tracecase/order-service": "workspace:*",
+    "zod": "3.25.76"
+  }
+}

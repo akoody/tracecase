@@ -1,0 +1,3 @@
+interface:
+  display_name: 'Tracecase'
+  short_description: 'Investigate backend incidents with source evidence'

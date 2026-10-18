@@ -1,0 +1,34 @@
+{
+  "name": "tracecase-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "skill:build": "node scripts/build-skill.mjs",
+    "skill:check": "node scripts/build-skill.mjs --check",
+    "skill:install-test": "node scripts/test-install.mjs",
+    "typecheck": "tsc -b --pretty false && tsc -p tsconfig.tests.json --pretty false",
+    "test": "pnpm typecheck && tsx --test packages/core/test/*.test.ts packages/cli/test/*.test.ts examples/order-service/test/*.test.ts evals/test/*.test.ts",
+    "check": "pnpm skill:check && pnpm test && pnpm format:check",
+    "tracecase": "tsx packages/cli/src/main.ts",
+    "demo": "tsx examples/order-service/src/main.ts",
+    "demo:serve": "tsx examples/order-service/src/server.ts",
+    "eval:prepare": "tsx evals/src/main.ts prepare",
+    "eval:score": "tsx evals/src/main.ts score",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "@types/pg": "^8.15.5",
+    "esbuild": "0.28.2",
+    "prettier": "^3.6.2",
+    "tsx": "4.23.15",
+    "typescript": "~5.9.3"
+  }
+}

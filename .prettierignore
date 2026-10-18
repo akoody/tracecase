@@ -1,0 +1,6 @@
+pnpm-lock.yaml
+dist
+node_modules
+.tracecase
+skills/tracecase/scripts/tracecase.mjs
+skills/tracecase/scripts/THIRD_PARTY_NOTICES.txt
