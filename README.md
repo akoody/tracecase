@@ -151,3 +151,7 @@ docker compose stop
 After changing the CLI or core, run `pnpm skill:build` to regenerate the installable runtime. `pnpm check` rejects a stale bundle. `pnpm skill:install-test` checks real installation in temporary projects and runs the installed tools after deleting their original source copy.
 
 The [architecture guide](docs/architecture.md) explains the module boundaries and the lab's intentional failure paths.
+
+## License
+
+[MIT](LICENSE)
